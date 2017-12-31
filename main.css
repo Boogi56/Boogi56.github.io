@@ -1,0 +1,67 @@
+:root {
+    --nav-height: 62px;
+    --landing-background-color: #fefced;
+    --main-content-color: #faf8e7;
+
+}
+
+body {
+    padding-top: var(--nav-height);
+    background: var(--landing-background-color) !important;
+}
+
+#keyboard-cat {
+    height: 36px;
+    padding: 1px;
+}
+
+.intro-container {
+    height: calc(100vh - var(--nav-height));
+}
+
+.intro {
+    position: absolute;
+    top: calc(33%);
+    width: 66%;
+}
+
+#navigation-arrow {
+    bottom: 25px;
+}
+
+#landing-content-divider {
+    margin: 0;
+}
+
+#main-content {
+    background: var(--main-content-color);
+}
+
+#headshot {
+    width: 225px;
+}
+
+#about-me-text {
+    line-height: 2rem;
+}
+
+.contact-icon {
+    font-size: 3em;
+}
+
+#home::before,
+#about::before,
+#projects::before,
+#contact::before {
+    display: block;
+    content: " ";
+    margin-top: calc(-1 * var(--nav-height));
+    height: var(--nav-height);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#about::before {
+    visibility: visible;
+    background: var(--landing-background-color);
+}
